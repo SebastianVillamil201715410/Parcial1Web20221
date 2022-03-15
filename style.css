@@ -1,0 +1,67 @@
+#rectangulo1{
+    position: absolute;
+    width: 1440px;
+    height: 110px;
+    left: 0px;
+    top: 29px;
+    background: #FFFFFF;
+}
+
+#titulo{
+    position: absolute;
+    width: 344px;
+    height: 62px;
+    left: 42px;
+    top: 56px;
+
+    font-family: 'Rochester';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    /* identical to box height */
+    color: #000000;
+}
+
+#carrito{
+    position: absolute;
+    width: 80px;
+    height: 81px;
+    left: 1257px;
+    top: 43px;
+}
+
+#linea1{
+    position: absolute;
+    width: 1440px;
+    height: 0px;
+    left: 0px;
+    top: 124px;
+    border: 1px solid #000000;
+}
+
+#linea2{
+    position: absolute;
+    width: 1440px;
+    height: 0px;
+    left: 0px;
+    top: 504px;
+    border: 1px solid #000000;
+}
+
+#imagenCentral{
+    position: absolute;
+    width: 1440px;
+    height: 344px;
+    left: 0px;
+    top: 149px;
+}
+
+#rectangulo2{
+    position: absolute;
+    width: 1440px;
+    height: 81px;
+    left: 0px;
+    top: 514px;
+    background: #333A40;
+}
