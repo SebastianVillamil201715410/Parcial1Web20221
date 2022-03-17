@@ -170,21 +170,3 @@ function desplegarCarrito(target , source){
     document.getElementById().innerHTML.style.display = "block";
 }
 
-function borrarCarro(pName) {
-    let foundIndex;
-    cart.forEach((element,index) => {
-        if (element.item.name==pName) {
-            foundIndex = index;
-        }
-    });
-    if (cart[foundIndex].qty==1) {
-        cart.splice(foundIndex,1);
-        let element = document.querySelector("#cart");
-        if (cart.length==0)
-            element.innerText = ''
-        else
-            element.innerText = cart.length + (cart.length==1?' item':' items');
-    } else {
-        cart[foundIndex].qty -= 1;
-    }
-}
