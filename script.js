@@ -134,6 +134,7 @@ function anadirCarro(pNombre,pName){
     } else {
         cantidad[0].qty += 1;
     }
+   
 
     cart.forEach( item => {
         row=row+1;
@@ -142,17 +143,17 @@ function anadirCarro(pNombre,pName){
         <tr>
             <th scope="row">${row}</th>
             <td>${item.qty}</td>
-            <td>${item.item.pNombre}</td>
+            <td>${item.item.name}</td>
             <td>${item.item.price}</td>
             <td>${item.qty*item.item.price}</td>
             <td>
                 <div class="row">
-                    <button type="button" class="btn btn-dark" id="add  " >
+                    <button type="button" class="btn btn-dark" id="add  " onclick="anadirCarrito('${item.item.name}','${item.item.pName}')">
                         +
                     </button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-dark" id="substract" >
+                    <button type="button" class="btn btn-dark" id="substract" onclick="borrarCarro(${item.item.pNombre})">
                         -
                     </button>
                 </div>
@@ -163,9 +164,27 @@ function anadirCarro(pNombre,pName){
 }
 
 
-
 function desplegarCarrito(target , source){
     document.getElementById(target).innerHTML = document.getElementById(source).innerHTML;
     document.getElementById("tituloItems").innerHTML ='Order Detail';
     document.getElementById().innerHTML.style.display = "block";
+}
+
+function borrarCarro(pName) {
+    let foundIndex;
+    cart.forEach((element,index) => {
+        if (element.item.name==pName) {
+            foundIndex = index;
+        }
+    });
+    if (cart[foundIndex].qty==1) {
+        cart.splice(foundIndex,1);
+        let element = document.querySelector("#cart");
+        if (cart.length==0)
+            element.innerText = ''
+        else
+            element.innerText = cart.length + (cart.length==1?' item':' items');
+    } else {
+        cart[foundIndex].qty -= 1;
+    }
 }
