@@ -9,19 +9,123 @@
     <title>Parcial Juan Sebastian Villamil</title>
 </head>
 <body>
-    <div class="container" id="container">
         <div class="row" id="rectangulo1">
-            <div class="col" id="titulo">Resaurant E Lounge</div>
-            <div class="col" id="carrito">
-                <button type="button" class="btn btn-light"><img src="img/image 1.png"></button>
-            </div>
+            <div class="col" ><p class="text" id="titulo">Restaurant E Lounge</p></div>
+            <div class="col">
+                <div class="row">
+                    <button type="button" class="btn btn-light" id="carrito" onclick="desplegarCarrito('menucentral','carritocentral') "><img src="img/image 1.png"></button>
+                    <p class="text" id="items">items</p>
+                    <p class="text" id="numeroItems"></p>
+                </div>
+            </div>  
         </div>
         <div class="row" id="linea1"></div>
         <div class="row" id="imagenCentral">
             <img src="img/image2.png">
         </div>
         <div class="row" id="linea2"></div>
-    </div>
+        <div class="row" id="menubar">
+            <button type="button" class="btn btn-dark" id="burguers" onclick="showTitle('Burguers')">
+                Burguers
+            </button>
+            <button type="button" class="btn btn-dark" id="tacos" onclick="showTitle('Tacos')">
+                Tacos
+            </button>
+            <button type="button" class="btn btn-dark" id="salads" onclick="showTitle('Salads')">
+                Salads
+            </button>
+            <button type="button" class="btn btn-dark" id="desserts" onclick="showTitle('Desserts')">
+                Desserts
+            </button>
+            <button type="button" class="btn btn-dark" id="drinks" onclick="showTitle('Drinks and Sides')">
+                Drinks & Sides
+            </button>
+        </div>
+        <div class="row" id="colTitulo">
+            <div class="col">
+                <p class="text" id="tituloItems"></p>
+            </div>
+        </div>
+        <div class="row" id="linea3"></div>
+        <div class="row" id="menucentral">
+            <!--
+            <div class="card" style="width: 300px;" id="item1">
+                <div class="row justify-content-center mt-3">
+                    <img src="" style="width: 250px;height:180px">
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <h5 class="card-title" >Card title</h5>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><strong>10.45</strong></p>
+                    <div class="row justify-content-center">
+                        <a href="#" class="btn btn-primary" onclick="anadirCarro()">Go somewhere</a>
+                    </div>
+                    
+                </div>
+            </div>
+            -->
+        </div>
+        <div class="row" id="carritocentral" style="display:none"> 
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Qty.</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Modify</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla">
+                <!--
+                  <tr>
+                    <th scope="row">1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col">
+                    <p id="total">Total: $...</p>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-dark" id="cancel" >
+                        Cancel
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-dark" id="order">
+                        Confirm Order
+                    </button>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+            <p>Contact us: +57 3102171020 - info@restaurant.com - @restaurant</p>
+        </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
